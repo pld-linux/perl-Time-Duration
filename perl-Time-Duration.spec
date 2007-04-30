@@ -9,7 +9,7 @@ Summary:	Time::Duration - rounded or exact English expression of durations
 #Summary(pl.UTF-8):	
 Name:		perl-Time-Duration
 Version:	1.04
-Release:	1
+Release:	2
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -18,8 +18,6 @@ Source0:	http://www.cpan.org/modules/by-module/Time/%{pdir}-%{pnam}-%{version}.t
 URL:		http://search.cpan.org/dist/Time-Duration/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with tests}
-%endif
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,6 +44,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+install -d $RPM_BUILD_ROOT%{perl_vendorlib}/Time/Duration
+
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -54,3 +54,5 @@ rm -rf $RPM_BUILD_ROOT
 %doc ChangeLog
 %{perl_vendorlib}/Time/*.pm
 %{_mandir}/man3/*
+
+%dir %{perl_vendorlib}/Time/Duration
