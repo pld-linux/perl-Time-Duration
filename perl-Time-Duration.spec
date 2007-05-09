@@ -6,7 +6,7 @@
 %define	pdir	Time
 %define	pnam	Duration
 Summary:	Time::Duration - rounded or exact English expression of durations
-#Summary(pl.UTF-8):	
+Summary(pl.UTF-8):	Time::Duration - przybliżone lub dokładne wyrażanie okresów czasu po angielsku
 Name:		perl-Time-Duration
 Version:	1.04
 Release:	2
@@ -22,11 +22,12 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-This module provides functions for expressing durations in rounded or exact
-terms.
+This module provides functions for expressing durations in rounded or
+exact terms.
 
-# %description -l pl.UTF-8
-# TODO
+%description -l pl.UTF-8
+Ten moduł udostępnia funkcje do wyrażania okresów czasu przy użyciu
+wyrażeń przybliżonych lub dokładnych.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
