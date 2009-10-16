@@ -8,13 +8,13 @@
 Summary:	Time::Duration - rounded or exact English expression of durations
 Summary(pl.UTF-8):	Time::Duration - przybliżone lub dokładne wyrażanie okresów czasu po angielsku
 Name:		perl-Time-Duration
-Version:	1.04
-Release:	2
+Version:	1.06
+Release:	1
 # same as perl
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/Time/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	0c8f3d4702bcf0b0750dd476ed5f17ec
+# Source0-md5:	d65108e0e4e8ffb38e28d532f8ddcd12
 URL:		http://search.cpan.org/dist/Time-Duration/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
